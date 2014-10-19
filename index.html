@@ -4,23 +4,25 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Brownpath : Simple Processing Sketch drawing colorfull brownian trajectories. ">
+    <meta name="description" content="BrownPath : Simple Processing Sketch drawing colorfull brownian trajectories. ">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Brownpath</title>
+    <title>BrownPath</title>
     
+    <!-- loading jquery library// should be loaded first-->
+		<script src="js/jquery-2.0.0.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+   
     <!-- loading Processing library that interprets a processing file "*.pde" into a javascript code
         this can be displayed in a canvas anywhere in the document.
-        -->
+    -->
 		<script src="javascripts/processing-1.4.1.min.js" type="text/javascript"></script>
 
-        <!-- loading MathJax library to display equation
+    <!-- loading MathJax library to display equation
         use the "$$ $$" or " "\( \)" to declare a latex equation anywhere in the text.        
-        -->
+    -->
 		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    
   </head>
 
   <body>
@@ -30,10 +32,10 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/phersen/BrownPath">View on GitHub</a>
 
-          <h1 id="project_title">Brownpath</h1>
-          <h2 id="project_tagline">Simple Processing Sketch drawing colorfull brownian trajectories. </h2>
+          <h1>Brown-Path</h1>
+          <h2>Simple Processing Sketch drawing colorfull brownian trajectories. </h2>
 
-            <section id="downloads">
+           <section id="downloads">
               <a class="zip_download_link" href="https://github.com/phersen/BrownPath/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/phersen/BrownPath/tarball/master">Download this project as a tar.gz file</a>
             </section>
@@ -42,20 +44,32 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      <div id="main_content" class="inner">
+     	<section class="c5">		
+    		<figure>    
+                 <canvas id="sketch" data-processing-sources="sketch/Brown.pde" width="640" height="640">
+                      <p>Your browser does not support the canvas tag.</p>
+                  </canvas>
+                  <noscript>
+                      <p>JavaScript is required to view the contents of this page.</p>
+                  </noscript>
+                  <figcaption> 
+                  	<!-- add a figure caption here-->
+                  </figcaption>
+             </figure>
+          </section>
+          
+          <section class="c4">
+          <h3> Browian Motion</h3>
+          <p> Particles are following a random path, which can be described as a brownian particles following the classic diffusion equation
+          $$ \frac{\partial \vec{r}}{\partial t} = D \delta \vec{r} $$
+          
+          
+          
+          </p>
+          </section> 
 
-	<canvas id="sketch" data-processing-sources="sketch/Brown.pde" width="640" height="640"></canvas>
-
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-      </section>
+    </div>
     </div>
 
     <!-- FOOTER  -->

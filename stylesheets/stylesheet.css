@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1{
-    font-size: 2 em; 
+    font-size: 2em; 
 	line-height: 1.5em; 
 	margin-bottom: 0.5em;
 	} /* 30px */
@@ -85,8 +85,7 @@ p, ul, blockquote, pre, td, th, label {
 	margin-bottom: 0.3335em} 
 	/* 16px */
 
-small, 
-p .small {
+.small {
 	margin: 0; 
 	font-size: 0.875em; 
 	line-height: 1.2em; 
@@ -94,7 +93,7 @@ p .small {
 	} /* 14px*/
 
 footer p {
-  color: #f2f2f2;
+  color: #EBE7D6;
 }
 
 a {
@@ -115,7 +114,7 @@ Mobile First
 }
 
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+  padding: 30px 10px 30px 10px;
 }
 
 
@@ -128,6 +127,9 @@ Mobile First
 }
 
 #footer_wrap {
+  border-top-color:#F60;
+  border-top-width:thin;
+  border-top-style:solid;
   background: #212121;
 }
 
@@ -138,9 +140,23 @@ Mobile First
 
 .inner {
   position: relative;
-  max-width: 75%;
+  width: 90%;
   padding: 20px 10px;
   margin: 0 auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
 }
 
 /*******************************************************************************
@@ -168,6 +184,10 @@ Full-Width Styles
   right: 0;
   height: 70px;
   background: url('../images/icon_download.png') no-repeat 0% 90%;
+}
+
+#main_content{
+	margin-top:30px;	
 }
 
 .zip_download_link {
@@ -203,20 +223,8 @@ Full-Width Styles
 Small Device Styles
 *******************************************************************************/
 
-@media screen and (max-width: 480px) {
-  body {
-    font-size:14px;
-  }
-
-  #downloads {
-    display: none;
-  }
-
-  .inner {
-    min-width: 320px;
-    max-width: 480px;
-  }
-
+@media screen and (min-width: 480px) {
+ 
 }
 
 /*******************************************************************************
@@ -224,30 +232,14 @@ Intermediate Device Styles
 *******************************************************************************/
 
 
-
-
-
 /*******************************************************************************
 Large screen
 *******************************************************************************/
-@media screen and (max-width: 480px) {
-  body {
-    font-size:14px;
-  }
-
-  #downloads {
-    display: none;
-  }
-
-  .inner {
-    min-width: 320px;
-    max-width: 480px;
-  }
-
 @media only screen and (min-width:750px) {
-.outer{
-	width:90%;
+.inner {
+width: 80%	
 }
+
 
 .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10{
 	display:inline; 
@@ -268,3 +260,16 @@ Large screen
 .c10 {width:98%}
 
 }
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+.inner {
+    width: 1026px; /* 1140px - 10% for margins */
+    margin: 0 auto;
+    }
+}
+
+

@@ -101,7 +101,12 @@ a {
   color: #F60;
 }
 
+*:focus {
+    outline: 0; /* not great for accessibility but the "outlining is really ugly .... */
+}
+
 a:hover, a:focus {text-decoration: underline;}
+
 
 /***********************************************************************************
 Mobile First
@@ -158,6 +163,7 @@ Mobile First
 .clearfix {
     *zoom: 1;
 }
+
 
 /*******************************************************************************
 Full-Width Styles

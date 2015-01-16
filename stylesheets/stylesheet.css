@@ -136,6 +136,7 @@ Mobile First
   border-top-width:thin;
   border-top-style:solid;
   background: #212121;
+  height:150px;
 }
 
 /* classes */
@@ -264,6 +265,14 @@ width: 80%
 .c8 {width:78%}
 .c9 {width:88%}
 .c10 {width:98%}
+
+footer{
+position			: fixed;
+			bottom				: 0;
+			left				: 0;
+			right				: 0;
+	
+}
 
 }
 
